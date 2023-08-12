@@ -41,65 +41,24 @@ body {
 #main-header {
     color: white;
     padding: 0.5vw 0 0 0;
-    height: 5vw;
+    height: 2vw;
     text-align: left;
     border-radius: 3px;
     /* border: solid #59a1ff; */
     margin-bottom: 2vw;
-    background-color: rgba(55, 52, 73, 1);
-    border-bottom: solid #5adaff 1px;
+    background-color: #2b2738;
 }
 
-li {
+/* li {
     list-style: none;
     font-family: 'Merriweather', serif;
     cursor: pointer;
-}
-
-/* -------Titulos y párrafos------- */
+} */
 
 
+/* #navbar,  */
 
-h1 {
-    font-family: "Breathe Fire";
-    color: #5adaff;
-    text-shadow: 4px 0 #000000, -4px 0 #000000, 0 4px #000000, 0 -4px #000000,
-               2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000; 
-    font-size: 7vw;
-    text-align: center;
-    margin-top: 30vw;
-}
-
-h2 {
-    font-family: "Matisse UB" ;
-    color: #5adaff;
-    text-shadow: 2px 2px #000000;
-    font-size: 2vw;
-    text-align: center;
-}
-
-.LogInText {
-
-    font-family: "Breathe Fire";
-    width: 10vw;
-    margin-top: 1vw;
-}
-
-#divConTexto {
-
-    margin-top: 10vw ;
-}
-.cuerpoDelTexto {
-
-    font-family: "Matisse M" ;
-    color: #ffffff;
-    font-size: 1vw;
-    text-align: center;
-}
-
-
-
-#navbar, #iconNavbar {
+#iconNavbar {
 
     list-style: none;
     margin: 0;
@@ -108,8 +67,7 @@ h2 {
     justify-content: flex-end;
     color: #fff;
     padding: 0 0 1vw 0;
-    background-color: rgba(55, 52, 73, 0.9);
-    height: 4vw;
+    background-color: #2b2738;
 }
 
 #navbar li {
@@ -154,11 +112,7 @@ ul a {
 
 
 
-
-
-
-
-
+/*-----------------------------------------------FIN DEL NAVBAR--------------------------------------------------------------------*/
 /* ----------------------------------------------------SECCION 1------------------------------------------------------------------ */
 /* .seccion1 {
     display:flex;
@@ -179,34 +133,113 @@ ul a {
     justify-content: center;
 } */
 
+/* -------Titulos y párrafos------- */
+
+
+
+/* h1 {
+    font-family: "Breathe Fire";
+    color: #5adaff;
+    text-shadow: 4px 0 #000000, -4px 0 #000000, 0 4px #000000, 0 -4px #000000,
+               2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000; 
+    font-size: 7vw;
+    text-align: center;
+    margin: 30vw 0 5vw 0;
+    margin-block-end: 3.5vw;
+} */
+
+.logo {
+    display: block;
+    width: 50%;
+    margin: 30vw auto 1vw auto;
+    align-items: center;
+}
+
+h2 {
+    font-family: "Matisse UB" ;
+    color:#5adaff;
+    /* text-shadow: 2px 2px #000000; */
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 0vw;
+}
+
+.LogInText {
+
+    font-family: "Matisse UB";
+    width: 10vw;
+    margin-top: 1vw;
+}
+
+.divFondo {
+
+    margin-top: -6vw ;
+    background-color: #4c4468;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.cuerpoDelTexto {
+
+    font-family: "Matisse M" ;
+    color: #ffffff;
+    font-size: 1vw;
+    text-align: center;
+}
 
 /* ----------------------------------------------FORMULARIO-------------------------------------------------------------------- */
 
 /*FORMULARIO*/
-.form-row {
-    margin-bottom: 4em;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
+
+
+
+.grid-container {
+    background-color:  #d0ccc3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25vw 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: 10vw 18vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
+    column-gap: 20px;
+
+
+}
+
+.fotoPerfilCharacter{
+    height: 90%;
+    grid-column-start:1; 
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.divFormulario {
+    grid-column-start: 2;
+    grid-column-end: 6;
+  
   }
+#nombre, #raza, #clase, #sexo {
+
+    width: 8vw;
+}
 
 .form {
-    background-color: rgba(55, 52, 73, 1);
-    border: 0.1em solid #5adaff;
     border-radius: 0.3m;
     padding: 2em;
-    margin: 1em 0 4em 0;
+    margin: 0;
+    font-family: "Matisse EB";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
  
   
   .form-row input[type=text] {
-    background-color: white;
-    border: 0.1em solid #5adaff;
-    border-radius: 0.3em;
+    background-color: #d0ccc3;
+    border-radius: 0.4em;
+    border-style: none;
     padding: 0.7em;
-    font-size: 1.5em;
+    font-size: 0.9em;
+    font-family: "Matisse M";
   }
   
   .form-row label {
@@ -214,6 +247,138 @@ ul a {
   }
 
   /* --------FIN DEL FORMULARIO----------- */
+/* Atributos */
+
+.divAtributos {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-columns: auto auto;
+
+
+}
+.atributo {
+    font-family: "Matisse EB" ;
+    color: #000000;
+    font-size: 1.5vw;
+    margin: 1.8vw 0 0 0;
+    text-align: center;
+}
+.buttonPlus {
+
+    height: 4vw;
+    width: 4vw;
+    margin: 2vw 0 0 2vw;
+    align-self: center;
+    font-size: 2vw;
+}
+
+.valorAtributo {
+
+    text-align: center;
+    margin: 0;
+    font-family: "Matisse EB";
+    font-size: 2vw;
+}
+
+/* Equipamiento */
+
+            .divEquipamiento {
+
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    font-family: "Matisse M";
+    font-size: 1.5vw;
+    border-radius:10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#miEquipo {
+
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+
+
+            .divHechizos {
+
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 11;
+    font-family: "Matisse M";
+    font-size: 1.5vw;
+    border-radius:10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#misHechizos {
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+
+.divVidaMana {
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    font-family: "Matisse M";
+    font-size: 1.5vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 6vw;
+    justify-items: center;
+    
+}
+.pVidaMana {
+
+    font-family: "Matisse EB";
+    font-size: 1.7vw;
+
+}
+#vida, #mana, #oro, #nivel {
+    height: 5vw;
+    width: 5vw;
+}
+
+
+.divDatosDelPersonaje {
+
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-family: "Matisse M";
+    font-size: 1.5vw;
+    border-radius:10%; 
+}
+
+.nombrePersonaje {
+
+    font-size: 3vw;
+    text-align: center;
+    margin: 0;
+}
+
+.profesionPersonaje, .razaPersonaje{
+
+    font-size: 1.7vw;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
 
 
 
