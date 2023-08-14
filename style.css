@@ -49,20 +49,32 @@ body {
     background-color: #2b2738;
 }
 
-/* li {
-    list-style: none;
-    font-family: 'Merriweather', serif;
+#burguerNavbar {
+    padding: 0 0 0 5vw;
+    margin: 0;
+    height: 8vw;
+    width: 10vw;
+    float: right;
     cursor: pointer;
-} */
+}
 
+#opened-menu {
+    display: none;
+  }
+#opened-menu.open {
+    background-color: rgba(0, 19, 105, 0.2);
+    text-align: center;
+    font-size: 45px;
+    padding: 10px;
+    text-shadow: none;
+    display: block;
+}
 
-/* #navbar,  */
-
-#iconNavbar {
+#expandedNavbar {
 
     list-style: none;
     margin: 0;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: flex-end;
     color: #fff;
@@ -70,68 +82,34 @@ body {
     background-color: #2b2738;
 }
 
-#navbar li {
 
-    display: none;
-}
-
-#iconNavbar li {
+#expandedNavbar li {
     
     width: 3vw;
     margin: 0vw 8vw;
 
 }
-.NavbarContactIcons {
-	width: 8vw;
-	}
 
-#burguerNavbar {
-    padding: 0 0 0 5vw;
-    margin: 0;
-    display: none;
-    height: 8vw;
-    width: 10vw;
-    float: right;
+
+
+li {
+    list-style: none;
     cursor: pointer;
 }
 
-ul a {
+.burguer {
 
-    text-decoration: none;
-}
-
-/* a:visited {
-
-    color: inherit;
-}
-
-.underlinedText {
-
-    text-decoration: underline white;
-} */
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    height: 0.8vw;
+    margin: 0.8vw;
+    
+    }
 
 
 
 /*-----------------------------------------------FIN DEL NAVBAR--------------------------------------------------------------------*/
-/* ----------------------------------------------------SECCION 1------------------------------------------------------------------ */
-/* .seccion1 {
-    display:flex;
-    flex-direction: row;    
-    align-items: center;
-    justify-content: center;
 
-}
-.blueDiv {
-
-    background-color: rgb(0, 0, 122);
-    height: 10vw;
-    width: 20vw;
-    border-radius: 20px;
-    margin: 30vw 10vw 0 10vw;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 /* -------Titulos y párrafos------- */
 
