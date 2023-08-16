@@ -22,9 +22,9 @@
                         </ul>
                     
                         <div id="opened-menu">
-                            <p>About us</p> 
-                            <p>Contact us</p> 
-                            <p>Our Products</p> 
+                            <p class="itemsMenuAbierto" id="itemIniciarSesion">Iniciar Sesión</p> 
+                            <p class="itemsMenuAbierto">Registrarse</p> 
+                            <p class="itemsMenuAbierto">Sobre Nosotros</p> 
                         </div>
                     
 
@@ -43,10 +43,13 @@
 
     </header>
 
-    <img class="logo" src="images\rolelogo2.svg" alt="">
+
+
+
+    <img class="logo" src="images\rolelogo2.svg" alt="Logo de la página">
     
 
-    <h2>Complete RPG Creator Online</h2>
+    <h1>Complete RPG Creator Online</h1>
 
 
 <div class="divFondo"></div>
@@ -68,7 +71,8 @@
                 <form action="/server/" method="POST" class="form">
                 
                         <label for="name">Nombre</label>
-                        <input type="text" id="nombre" name="nombre"> 
+                        <input type="text" id="nombre" name="nombre" placeholder="Sylas">
+                        <button type ="button" id="submitName">Busca tu personaje</button> 
 
                         <label for="raza">Raza</label>
                         <input type="text" id="raza" name="raza">

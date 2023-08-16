@@ -62,12 +62,25 @@ body {
     display: none;
   }
 #opened-menu.open {
-    background-color: rgba(0, 19, 105, 0.2);
+    background-color: rgba(0, 19, 105, 0.5);
     text-align: center;
     font-size: 45px;
     padding: 10px;
     text-shadow: none;
     display: block;
+}
+
+.itemsMenuAbierto {
+
+    font-size: 2vw;
+    font-family: "Matisse EB";
+    
+
+}
+
+#itemIniciarSesion {
+
+    margin-top: 9vw;
 }
 
 #expandedNavbar {
@@ -115,17 +128,6 @@ li {
 
 
 
-/* h1 {
-    font-family: "Breathe Fire";
-    color: #5adaff;
-    text-shadow: 4px 0 #000000, -4px 0 #000000, 0 4px #000000, 0 -4px #000000,
-               2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000; 
-    font-size: 7vw;
-    text-align: center;
-    margin: 30vw 0 5vw 0;
-    margin-block-end: 3.5vw;
-} */
-
 .logo {
     display: block;
     width: 50%;
@@ -133,7 +135,7 @@ li {
     align-items: center;
 }
 
-h2 {
+h1 {
     font-family: "Matisse UB" ;
     color:#5adaff;
     /* text-shadow: 2px 2px #000000; */
@@ -197,6 +199,10 @@ h2 {
 #nombre, #raza, #clase, #sexo {
 
     width: 8vw;
+}
+#submitName {
+
+    background-color: yellow;
 }
 
 .form {
