@@ -172,8 +172,8 @@ if (campaignFinder) {
     let mensaje = `
     id: ${campaignFinder.id}
     nombre: ${campaignFinder.nombre}
-    clase: ${campaignFinder.fecha_de_inicio}
-    raza: ${campaignFinder.jugadores}
+    Fecha de Inicio: ${campaignFinder.fecha_de_inicio}
+    Jugadores: ${campaignFinder.jugadores}
     `
     
     alert (mensaje)
