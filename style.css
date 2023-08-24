@@ -47,6 +47,9 @@ body {
     /* border: solid #59a1ff; */
     margin-bottom: 2vw;
     background-color: #2b2738;
+    position: sticky;
+    top: 0;
+    right: 0;
 }
 
 #burguerNavbar {
@@ -135,14 +138,53 @@ li {
     align-items: center;
 }
 
+.divFondo {
+
+    margin-top: 6vw ;
+    background-color: #4c4468;
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     font-family: "Matisse UB" ;
     color:#5adaff;
     /* text-shadow: 2px 2px #000000; */
     font-size: 2vw;
     text-align: center;
-    margin-top: 0vw;
+    margin: 3vw;
 }
+
+#buttonCreaPersonaje {
+
+width: 18vw;
+height: 6vw;
+margin: 3vw auto 3vw auto;
+background-color: #4CC2F1;
+align-items: center;
+border-radius: 24px;
+border-style: none;
+box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+box-sizing: border-box;
+color: #3c4043;
+cursor: pointer;
+display: inline-flex;
+font-family: "Matisse UB";
+font-size: 1.3vw;
+justify-content: center;
+max-width: 100%;
+padding: 2px 24px;
+position: relative;
+text-align: center;
+max-width: 100%;
+}
+
+#buttonCreaPersonaje:active {
+    box-shadow: #222c7e 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
 
 .LogInText {
 
@@ -151,15 +193,7 @@ h1 {
     margin-top: 1vw;
 }
 
-.divFondo {
 
-    margin-top: -6vw ;
-    background-color: #4c4468;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-}
 .cuerpoDelTexto {
 
     font-family: "Matisse M" ;
@@ -181,6 +215,8 @@ h1 {
     grid-template-columns: 25vw 15vw 15vw 15vw 15vw 15vw;
     grid-template-rows: 10vw 18vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
     column-gap: 20px;
+    background-image: url("images/fondopersonaje3.jpg");
+    background-size: 99vw;
 
 
 }
@@ -191,29 +227,34 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.divFormulario {
-    grid-column-start: 2;
-    grid-column-end: 6;
-  
+#divFormulario {
+    
+    background-color: #272625;
   }
+
+  #form {
+    border-radius: 0.3m;
+    padding: 2em;
+    margin: 0;
+    font-family: "Matisse EB";
+    grid-template-columns: 15vw 25vw auto auto; 
+    row-gap: 10px;
+  }
+
+#form label {
+
+    color: antiquewhite;
+}
 #nombre, #raza, #clase, #sexo {
 
-    width: 8vw;
+    width: 15vw;
 }
 #submitName {
 
     background-color: yellow;
 }
 
-.form {
-    border-radius: 0.3m;
-    padding: 2em;
-    margin: 0;
-    font-family: "Matisse EB";
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+
   
  
   
@@ -245,10 +286,11 @@ h1 {
 }
 .atributo {
     font-family: "Matisse EB" ;
-    color: #000000;
+    color: #ffffff;
     font-size: 1.5vw;
     margin: 1.8vw 0 0 0;
     text-align: center;
+    z-index: 1;
 }
 .buttonPlus {
 
@@ -288,6 +330,9 @@ h1 {
     resize: none;
     height: 100%;
     width: 100%;
+    /* background-image: url("images/fondopersonaje3.jpg"); */
+    /* border: solid 2vw #4CC2F1; */
+    border-radius: 10px;
 }
 
 
@@ -360,6 +405,15 @@ h1 {
     margin: 0;
 }
 
+#marcoAtributo {
+
+    position: absolute;
+    height: 7vw;
+    top: 105vw;
+    left: 25.5vw;
+
+
+}
 
 
 

@@ -155,33 +155,65 @@ if (characterFinder) {
 botonDeBusqueda.addEventListener ('click', busquedaDelPersonaje)
 
 
+
+// Navbar que desaparece al scrolear
+
+let navbar = document.getElementById ('main-header')
+let scrollDown = window.pageYOffset
+
+if (scrollDown >= 350) {
+
+navbar.style.display = 'none'
+} else {
+
+    navbar.style.display = 'block'
+}
+
+//Crear tu personaje
+
+let buttonCreate =document.getElementById("buttonCreaPersonaje")
+let formularioCrearPersonaje =document.getElementById ("form")
+
+buttonCreate.addEventListener ('click', () =>{
+console.log(buttonCreate)
+formularioCrearPersonaje.style.display = "grid"
+})
+
+
+
+
+
+
+
+
+
 // Búsqueda de la campaña a través de prompt al iniciar la página
 
-const campaña = [
+// const campaña = [
 
-    {nombre: "La hoja del diablo", fecha_de_inicio: "Julio 2023", jugadores: 4, id:1},
-    {nombre: "Pociones y Dragones", fecha_de_inicio: "Mayo 2023", jugadores: 5, id:2},
-    {nombre: "3 Borrachos en Sycamore Town", fecha_de_inicio: "Mayo 2023", jugadores: 3, id:3}
+//     {nombre: "La hoja del diablo", fecha_de_inicio: "Julio 2023", jugadores: 4, id:1},
+//     {nombre: "Pociones y Dragones", fecha_de_inicio: "Mayo 2023", jugadores: 5, id:2},
+//     {nombre: "3 Borrachos en Sycamore Town", fecha_de_inicio: "Mayo 2023", jugadores: 3, id:3}
 
-]
-let promptEnteredNumber = prompt ("¿Que campaña jugaremos hoy?")
-const campaignFinder = campaña.find((item) => item.id === parseInt(promptEnteredNumber))
+// ]
+// let promptEnteredNumber = prompt ("¿Que campaña jugaremos hoy?")
+// const campaignFinder = campaña.find((item) => item.id === parseInt(promptEnteredNumber))
 
-if (campaignFinder) {
+// if (campaignFinder) {
 
-    let mensaje = `
-    id: ${campaignFinder.id}
-    nombre: ${campaignFinder.nombre}
-    Fecha de Inicio: ${campaignFinder.fecha_de_inicio}
-    Jugadores: ${campaignFinder.jugadores}
-    `
+//     let mensaje = `
+//     id: ${campaignFinder.id}
+//     nombre: ${campaignFinder.nombre}
+//     Fecha de Inicio: ${campaignFinder.fecha_de_inicio}
+//     Jugadores: ${campaignFinder.jugadores}
+//     `
     
-    alert (mensaje)
+//     alert (mensaje)
 
- } else {
+//  } else {
 
-    alert ("¡Por las barbas de Merlín, no tenemos la campaña que buscas!")
- }
+//     alert ("¡Por las barbas de Merlín, no tenemos la campaña que buscas!")
+//  }
 
 
 

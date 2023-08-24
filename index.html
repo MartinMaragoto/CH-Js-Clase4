@@ -49,46 +49,51 @@
     <img class="logo" src="images\rolelogo2.svg" alt="Logo de la página">
     
 
+   
+
+
+<div class="divFondo">
+
     <h1>Complete RPG Creator Online</h1>
-
-
-<div class="divFondo"></div>
-
-
     <div>
         <p class="cuerpoDelTexto">Bienvenidos a la taberna! Estamos a punto de empezar la partida! <br>Tomen un asiento y un jarro de bebida! <br>Aquí podrán crear, darle vida y guardar sus personajes. </p>
     </div>
 
+<button id="buttonCreaPersonaje">Crea tu personaje</button>
+
+</div>
+
+<!-- FORMULARIO PARA CREAR PERSONAJE -->
+<div id="divFormulario">   
+    <form action="/server/" method="POST" id="form">
+    
+            <label for="name">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Sylas">
+            <!-- <button type ="button" id="submitName">Busca tu personaje</button>  -->
+
+            <label for="raza">Raza</label>
+            <input type="text" id="raza" name="raza">
+
+            <label for="clase">Clase</label>
+            <input type="text" id="clase" name="clase">
+
+            <label for="sexo">Sexo</label>
+            <input type="text" id="sexo" name="sexo">
+
+        
+
+            
+        
+    </form>
+</div>
 
 
-<!-- FORMULARIO -->
+<!-- FICHA DEL PERSONAJE -->
 <div class="grid-container">
 
             <img class="fotoPerfilCharacter" src="images\antonio-dell-aquila-paint-busi.jpg" alt="">
             
             
-            <div class="divFormulario">   
-                <form action="/server/" method="POST" class="form">
-                
-                        <label for="name">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Sylas">
-                        <button type ="button" id="submitName">Busca tu personaje</button> 
-
-                        <label for="raza">Raza</label>
-                        <input type="text" id="raza" name="raza">
-
-                        <label for="clase">Clase</label>
-                        <input type="text" id="clase" name="clase">
-
-                        <label for="sexo">Sexo</label>
-                        <input type="text" id="sexo" name="sexo">
-
-                    
-
-                        
-                    
-                </form>
-        </div>
 
         <div class="divVidaMana">
 
@@ -159,9 +164,18 @@
             
       </div>
 
+      <div id="divDecoraciones">
+
+            <img id="marcoAtributo" src="images\marcoatributo.png" alt="">
+      </div>
+
 
 
 </div>
+
+
+
+
 
 
 
