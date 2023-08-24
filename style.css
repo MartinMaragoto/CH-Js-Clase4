@@ -239,6 +239,7 @@ max-width: 100%;
     font-family: "Matisse EB";
     grid-template-columns: 15vw 25vw auto auto; 
     row-gap: 10px;
+    display: none;
   }
 
 #form label {
