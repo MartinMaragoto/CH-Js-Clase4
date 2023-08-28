@@ -152,7 +152,7 @@ if (characterFinder) {
  }
 }
 
-botonDeBusqueda.addEventListener ('click', busquedaDelPersonaje)
+// botonDeBusqueda.addEventListener ('click', busquedaDelPersonaje)
 
 
 
@@ -179,8 +179,75 @@ console.log(buttonCreate)
 formularioCrearPersonaje.style.display = "grid"
 })
 
+//----------------------------------------------------------------------- DADOS VIRTUALES --------------------------------------------------------------------------------------------//
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
+
+let btn = document.getElementById ('baton')
+let todosLosDados =document.querySelectorAll ('dados')
+
+
+function rollTheDice() {                      
+
+    return Math.floor (Math.random() *6+1) 
+    
+}
+
+btn.addEventListener('click', rollTheDice)
+
+
+let one= document.getElementById ("uno")
+let two= document.getElementById ("dos")
+let three= document.getElementById ("tres")
+let four= document.getElementById ("cuatro")
+let five= document.getElementById ("cinco")
+let six= document.getElementById ("seis")
+
+btn.addEventListener('click', function() {
+    let resultado = rollTheDice(); 
+
+    one.style.display = "none";
+    two.style.display = "none";
+    three.style.display = "none";
+    four.style.display = "none";
+    five.style.display = "none";
+    six.style.display = "none";
+
+    switch(resultado) {
+
+case 1:
+    todosLosDados.forEach(element => {
+        element.style.display ="none"
+    });
+    one.style.display= "block"
+
+break;
+
+case 2:
+    
+    two.style.display= "block"
+break;
+
+case 3:
+    three.style.display= "block"
+break;
+
+case 4:
+    four.style.display= "block"
+break;
+
+case 5:
+    five.style.display= "block"
+break;
+
+case 6:
+    six.style.display= "block"
+break;
+
+    }
+    inputText.value = resultado; 
+});
 
 
 
