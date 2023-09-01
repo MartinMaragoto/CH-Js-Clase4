@@ -94,15 +94,13 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     color: #fff;
-    padding: 0 0 1vw 0;
     background-color: #2b2738;
 }
 
 
 #expandedNavbar li {
-    
-    width: 3vw;
-    margin: 0vw 8vw;
+
+    margin: 0vw 4vw;
 
 }
 
@@ -111,6 +109,20 @@ body {
 li {
     list-style: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-family: "Matisse M";
+}
+
+#liUsuarioX {
+
+    display: none;
+
+}
+#usuarioX {
+
+    font-family: "Matisse UB" ;
+    text-align: center;
 }
 
 .burguer {
@@ -122,8 +134,58 @@ li {
     
     }
 
+#registerWindow, #loginWindow {
+
+    display: none;
+    position: absolute;
+    top: 15vw;
+    left: 20vw;
+}
+
+#registerWindow.open, #loginWindow.open {
+
+    background-color: #4c4468;
+    width: 50%;
+    margin: auto;
+    padding: 5vw;
+    display: block;
+
+}
+
+#registerForm, #loginForm {
+
+    border-radius: 0.3m;
+    padding: 2vw;
+    margin: 2vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    justify-content: center;
+    font-family: "Matisse UB" ;
+    text-align: center;
+}
+
+#userName, #loginUsername {
+
+    font-family: "Matisse M" ;
+
+}
 
 
+#password, #loginPassword {
+
+    font-family: "Matisse M" ;
+
+}
+
+.divBotonCancelar {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
 /*-----------------------------------------------FIN DEL NAVBAR--------------------------------------------------------------------*/
 
 
@@ -147,7 +209,7 @@ li {
     flex-direction: column;
 }
 
-h1 {
+.subtitulo {
     font-family: "Matisse UB" ;
     color:#5adaff;
     /* text-shadow: 2px 2px #000000; */
@@ -156,7 +218,7 @@ h1 {
     margin: 3vw;
 }
 
-#buttonCreaPersonaje {
+#buttonCreaPersonaje, #botonAceptaRegistro, #botonCancelarRegistro, #botonAceptaSesion, #botonCancelarSesion, #botonSubmitCharacter {
 
 width: 18vw;
 height: 6vw;
@@ -184,7 +246,8 @@ max-width: 100%;
     box-shadow: #222c7e 0 3px 7px inset;
     transform: translateY(2px);
   }
-  
+
+
 
 .LogInText {
 
@@ -213,7 +276,7 @@ max-width: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 25vw 15vw 15vw 15vw 15vw 15vw;
-    grid-template-rows: 10vw 5vw 13vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
+    grid-template-rows: 10vw 18vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw 7vw;
     column-gap: 20px;
     background-image: url("images/fondopersonaje3.jpg");
     background-size: 99vw;
@@ -225,7 +288,7 @@ max-width: 100%;
     height: 90%;
     grid-column-start:1; 
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
 }
 #divFormulario {
     
@@ -237,9 +300,9 @@ max-width: 100%;
     padding: 2em;
     margin: 0;
     font-family: "Matisse EB";
-    display: none;
     grid-template-columns: 15vw 25vw auto auto; 
     row-gap: 10px;
+    display: none;
   }
 
 #form label {
@@ -250,10 +313,15 @@ max-width: 100%;
 
     width: 15vw;
 }
-#submitName {
+
+#botonSubmitCharacter {
+
+grid-column-start: 3;
+}
+/* #submitName {
 
     background-color: yellow;
-}
+} */
 
 
   
@@ -278,8 +346,8 @@ max-width: 100%;
 .divAtributos {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 6;
     display: grid;
     grid-template-columns: auto auto;
 
@@ -312,12 +380,12 @@ max-width: 100%;
 
 /* Equipamiento */
 
-.divEquipamiento {
+            .divEquipamiento {
 
     grid-column-start: 4;
     grid-column-end: 6;
-    grid-row-start: 4;
-    grid-row-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 6;
     font-family: "Matisse M";
     font-size: 1.5vw;
     border-radius:10%;
@@ -337,12 +405,12 @@ max-width: 100%;
 }
 
 
-.divHechizos {
+            .divHechizos {
 
     grid-column-start: 4;
     grid-column-end: 6;
-    grid-row-start: 9;
-    grid-row-end: 12;
+    grid-row-start: 8;
+    grid-row-end: 11;
     font-family: "Matisse M";
     font-size: 1.5vw;
     border-radius:10%;
@@ -361,7 +429,7 @@ max-width: 100%;
 
     grid-column-start: 2;
     grid-column-end: 6;
-    grid-row-start: 1;
+    grid-row-start: 2;
     font-family: "Matisse M";
     font-size: 1.5vw;
     display: grid;
@@ -377,60 +445,36 @@ max-width: 100%;
 
 }
 #vida, #mana, #oro, #nivel {
-    height: 3vw;
-    width: 3vw;
+    height: 5vw;
+    width: 5vw;
 }
 
-#divDado {
-    grid-column-start: 2; 
-    grid-column-end: 6; 
-    grid-row-start: 2;
-    grid-row-end: 5;
-    background-image: url("images/fondo.png");
-    background-repeat: no-repeat;
-    background-size: 60vw;
-    display: flex;
-    flex-direction: row;
-  
-}
-#dadoImagen {
-    display: block;
-    width: 25%;
-}
-#dadoImagen2 {
-    display: block;
-    width: 25%;
-
-   
-}
 
 .divDatosDelPersonaje {
 
     grid-column-start: 1;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
     font-family: "Matisse M";
     font-size: 1.5vw;
     border-radius:10%; 
 }
 
-.nombrePersonaje {
+#nombrePersonaje {
 
     font-size: 3vw;
     text-align: center;
     margin: 0;
 }
 
-.profesionPersonaje, .razaPersonaje{
+#clasePersonaje, #razaPersonaje, #sexoPersonaje{
 
     font-size: 1.7vw;
     text-align: center;
     margin: 0;
 }
 
-
-/* ESCUDO para poner atrás de los atributos */
-/* #marcoAtributo {
+#marcoAtributo {
 
     position: absolute;
     height: 7vw;
@@ -438,7 +482,7 @@ max-width: 100%;
     left: 25.5vw;
 
 
-} */
+}
 
 
 

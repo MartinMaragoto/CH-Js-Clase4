@@ -1,80 +1,61 @@
  
- //NAVBAR----------------------------------------------------------
 
- const burguerUl = document.getElementById ('burguerNavbar') //el ul del menú hamburguesa
- const burguerLi = document.querySelectorAll ('#burguerNavbar li')//las rayitas del menu hamburguesa
-
- const expandedNavbarUl = document.getElementById ('expandedNavbar') // ul del nabvar expandido
- const expandedNavbarLi = document.querySelectorAll ('#iconNavbar li') //iniciar sesion y registrarse
- const openedMenu = document.getElementById ('opened-menu')
-
- const windowWidth = window.innerWidth
-
-
-
-  if (windowWidth >=945) {
-    burguerUl.style.display = 'none';
-    burguerLi.forEach(li => li.style.display = 'none');
-     expandedNavbarUl.style.display = 'flex';
-    
- } else {
-     burguerUl.style.display = 'block'
-     burguerLi.forEach(li => li.style.display = 'block')
-     expandedNavbarUl.style.display = 'none'
- }
-
-function openTheMenu(){
-
-    openedMenu.classList.toggle('open')
-    }
-    
-    burguerUl.addEventListener('click', openTheMenu);
- 
- 
-
-//----------------------   Atributos y botón +   -----------------------------------
+//----------------------   Atributos y botón +   -------------------------------------
  let botonMas =document.getElementsByClassName ('buttonPlus')
 
  //Atributos
- let strength=document.getElementById('fuerza')
- let dexterity=document.getElementById('destreza')
- let constitution=document.getElementById('constitucion')
- let intelligence=document.getElementById('inteligencia')
- let wisdom=document.getElementById('sabiduria')
- let charisma=document.getElementById('carisma')
+ const atributos ={
 
+    strength: document.getElementById('fuerza'),
+    dexterity: document.getElementById('destreza'),
+    constitution: document.getElementById('constitucion'),
+    intelligence: document.getElementById('inteligencia'),
+    wisdom: document.getElementById('sabiduria'),
+    charisma: document.getElementById('carisma')
+ } 
+ let strength= atributos.strength
+ let dexterity= atributos.dexterity
+ let constitution= atributos.constitution
+ let intelligence= atributos.intelligence
+ let wisdom= atributos.wisdom
+ let charisma= atributos.charisma
 
- let valorStrength =0
- let valorDexterity =0
- let valorConstitution =0
- let valorIntelligence = 0
- let valorWisdom =0
- let valorCharisma =0
+const valorAtributos = {
+
+    valorStrength: 0,
+    valorDexterity: 0,
+    valorConstitution: 0,
+    valorIntelligence: 0,
+    valorWisdom: 0,
+    valorCharisma: 0
+
+}
+ 
 
 
  botonMas[0].addEventListener('click', function() {
-     valorStrength++;
-     strength.textContent = valorStrength;
+     valorAtributos.valorStrength++;
+     strength.textContent = valorAtributos.valorStrength;
  });
  botonMas[1].addEventListener('click', function() {
-     valorDexterity++;
-     dexterity.textContent = valorDexterity;
+     valorAtributos.valorDexterity++;
+     dexterity.textContent = valorAtributos.valorDexterity;
  });
  botonMas[2].addEventListener('click', function() {
-     valorConstitution++;
-     constitution.textContent = valorConstitution;
+     valorAtributos.valorConstitution++;
+     constitution.textContent = valorAtributos.valorConstitution;
  });
  botonMas[3].addEventListener('click', function() {
-     valorIntelligence++;
-     intelligence.textContent = valorIntelligence;
+     valorAtributos.valorIntelligence++;
+     intelligence.textContent = valorAtributos.valorIntelligence;
  });
  botonMas[4].addEventListener('click', function() {
-     valorWisdom++;
-     wisdom.textContent = valorWisdom;
+     valorAtributos.valorWisdom++;
+     wisdom.textContent = valorAtributos.valorWisdom;
  });
  botonMas[5].addEventListener('click', function() {
-     valorCharisma++;
-     charisma.textContent = valorCharisma;
+     valorAtributos.valorCharisma++;
+     charisma.textContent = valorAtributos.valorCharisma;
  });
 
 
@@ -103,13 +84,13 @@ const personaje5 = new Personaje ("5", "Andrey", "Arquero", "Masculino", "Humano
 
 //-------------------------------Método de filtrado--------------------------------------
 
-const personajes = [personaje1, personaje2, personaje3, personaje4, personaje5]
+// const personajes = [personaje1, personaje2, personaje3, personaje4, personaje5]
 
-personajes.forEach((item)=> {
+// personajes.forEach((item)=> {
 
-    console.log(item.clase)
-    console.log(item.raza)
-})
+//     console.log(item.clase)
+//     console.log(item.raza)
+// })
 
 
 
@@ -175,79 +156,11 @@ let buttonCreate =document.getElementById("buttonCreaPersonaje")
 let formularioCrearPersonaje =document.getElementById ("form")
 
 buttonCreate.addEventListener ('click', () =>{
-console.log(buttonCreate)
 formularioCrearPersonaje.style.display = "grid"
 })
 
-//----------------------------------------------------------------------- DADOS VIRTUALES --------------------------------------------------------------------------------------------//
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
 
-
-let btn = document.getElementById ('baton')
-let todosLosDados =document.querySelectorAll ('dados')
-
-
-function rollTheDice() {                      
-
-    return Math.floor (Math.random() *6+1) 
-    
-}
-
-btn.addEventListener('click', rollTheDice)
-
-
-let one= document.getElementById ("uno")
-let two= document.getElementById ("dos")
-let three= document.getElementById ("tres")
-let four= document.getElementById ("cuatro")
-let five= document.getElementById ("cinco")
-let six= document.getElementById ("seis")
-
-btn.addEventListener('click', function() {
-    let resultado = rollTheDice(); 
-
-    one.style.display = "none";
-    two.style.display = "none";
-    three.style.display = "none";
-    four.style.display = "none";
-    five.style.display = "none";
-    six.style.display = "none";
-
-    switch(resultado) {
-
-case 1:
-    todosLosDados.forEach(element => {
-        element.style.display ="none"
-    });
-    one.style.display= "block"
-
-break;
-
-case 2:
-    
-    two.style.display= "block"
-break;
-
-case 3:
-    three.style.display= "block"
-break;
-
-case 4:
-    four.style.display= "block"
-break;
-
-case 5:
-    five.style.display= "block"
-break;
-
-case 6:
-    six.style.display= "block"
-break;
-
-    }
-    inputText.value = resultado; 
-});
 
 
 
