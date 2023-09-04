@@ -54,48 +54,49 @@
     
 </div> -->
 
-<div id="registerWindow">
+    <div id="registerWindow">
 
-    <p class="subtitulo">Registro de Usuario</p>
+        <p class="subtitulo">Registro de Usuario</p>
 
-    <form action="/server/" method="POST" id="registerForm">
-    
-        <label for="userName">Usuario</label>
-        <input type="text" id="userName" name="user" placeholder="Por Ejemplo: Brutus">
+        <form action="/server/" method="POST" id="registerForm">
+        
+            <label for="userName">Usuario</label>
+            <input type="text" id="userName" name="user" placeholder="Por Ejemplo: Brutus">
 
-        <label for="password">Contraseña</label>
-        <input type="text" id="password" name="pass" placeholder="Por Ejemplo: mago1234">
-        <input type="submit" value="Aceptar" id="botonAceptaRegistro">
-    </form>
+            <label for="password">Contraseña</label>
+            <input type="text" id="password" name="pass" placeholder="Por Ejemplo: mago1234">
+            <input type="submit" value="Aceptar" id="botonAceptaRegistro">
+        </form>
 
-    <div class="divBotonCancelar">
-        <button id="botonCancelarRegistro">Cancelar</button>
+        <div class="divBotonCancelar">
+            <button id="botonCancelarRegistro">Cancelar</button>
+        </div>
+        
+
+
     </div>
-    
+    <div id="loginWindow">
+
+        <p class="subtitulo">Iniciar Sesión</p>
+
+        <form action="/server/" method="POST" id="loginForm">
+        
+            <label for="userName">Usuario</label>
+            <input type="text" id="loginUserName" name="user">
+
+            <label for="password">Contraseña</label>
+            <input type="text" id="loginPassword" name="pass">
+            <input type="submit" value="Aceptar" id="botonAceptaSesion">
+        </form>
+
+        <div class="divBotonCancelar">
+            <button id="botonCancelarSesion">Cancelar</button>
+        </div>
+        
 
 
-</div>
-<div id="loginWindow">
-
-    <p class="subtitulo">Iniciar Sesión</p>
-
-    <form action="/server/" method="POST" id="loginForm">
-    
-        <label for="userName">Usuario</label>
-        <input type="text" id="loginUserName" name="user">
-
-        <label for="password">Contraseña</label>
-        <input type="text" id="loginPassword" name="pass">
-        <input type="submit" value="Aceptar" id="botonAceptaSesion">
-    </form>
-
-    <div class="divBotonCancelar">
-        <button id="botonCancelarSesion">Cancelar</button>
     </div>
-    
 
-
-</div>
 
 
 
